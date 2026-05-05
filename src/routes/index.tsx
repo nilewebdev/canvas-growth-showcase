@@ -1,7 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Sparkles, Search, MousePointerClick } from "lucide-react";
-import { projects } from "@/data/projects";
-import { ProjectCard } from "@/components/ProjectCard";
 import { SectionHeading } from "@/components/SectionHeading";
 import { PricingCard, tiers } from "@/components/PricingCard";
 import { useReveal } from "@/hooks/use-reveal";
@@ -182,7 +180,6 @@ function Home() {
   return (
     <>
       <Hero />
-      <Showcase />
       <WhatWeDo />
       <Results />
       <PricingPreview />
