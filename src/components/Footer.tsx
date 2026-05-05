@@ -29,15 +29,15 @@ export function Footer() {
   return (
     <footer className="bg-[oklch(0.94_0.005_85)] mt-24">
       <div className="container-narrow pt-16 pb-10">
-        <div className="grid gap-12 md:grid-cols-3 text-center md:text-left items-start">
-          <div className="flex flex-col items-center md:items-start gap-4">
+        <div className="grid gap-12 md:grid-cols-3 text-left items-start">
+          <div className="flex flex-col items-start gap-4">
             <Logo height={36} />
             <p className="text-sm text-muted-foreground max-w-xs">
               Helping businesses grow through better websites and Google visibility.
             </p>
           </div>
 
-          <nav className="flex flex-col gap-3 items-center">
+          <nav className="flex flex-col gap-3 md:items-center">
             {links.map((l) => (
               <Link
                 key={l.to}
@@ -49,7 +49,7 @@ export function Footer() {
             ))}
           </nav>
 
-          <div className="flex flex-col items-center md:items-end gap-5">
+          <div className="flex flex-col items-start md:items-end gap-5">
             <a
               href="mailto:contact@notisce.co.uk"
               className="text-sm text-foreground hover:text-[var(--color-sand)] transition-colors"
@@ -73,7 +73,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-6 border-t border-[var(--color-sand)]/40 flex flex-col md:flex-row justify-between gap-2 text-xs text-muted-foreground">
+        <div className="mt-12 pt-6 border-t border-[var(--color-sand)]/40 flex flex-row justify-between gap-2 text-xs text-muted-foreground">
           <p>© 2026 Notisce Digital</p>
           <p>All rights reserved</p>
         </div>
