@@ -28,9 +28,9 @@ export function Navbar() {
         scrolled ? "backdrop-blur-md bg-background/75 border-b border-border/60" : "bg-transparent"
       }`}
     >
-      <div className="container-narrow flex items-center justify-between h-16 md:h-20">
-        <Link to="/" className="text-foreground" onClick={() => setOpen(false)}>
-          <Logo />
+      <div className="container-narrow flex items-center justify-between h-14 md:h-20">
+        <Link to="/" className="text-foreground" onClick={() => setOpen(false)} aria-label="Notisce Digital home">
+          <Logo height={28} className="md:h-9" />
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">
