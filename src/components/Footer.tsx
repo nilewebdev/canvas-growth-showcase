@@ -19,7 +19,7 @@ const socials = [
 const links = [
   { to: "/", label: "Home" },
   { to: "/what-we-do", label: "What We Do" },
-  { to: "/work", label: "Work" },
+  
   { to: "/pricing", label: "Pricing" },
   { to: "/contact", label: "Contact" },
 ] as const;
