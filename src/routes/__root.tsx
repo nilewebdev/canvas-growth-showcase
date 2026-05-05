@@ -30,7 +30,7 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Notisce Digital — Websites & Google Growth for Modern Businesses" },
+      { title: "Notisce Digital, Websites & Google Growth for Modern Businesses" },
       { name: "description", content: "A premium digital agency helping businesses get more customers through better websites and Google visibility." },
       { property: "og:title", content: "Notisce Digital" },
       { property: "og:description", content: "Premium websites, SEO and conversion for modern businesses." },

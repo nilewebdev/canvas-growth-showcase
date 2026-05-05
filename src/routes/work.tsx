@@ -8,9 +8,9 @@ import { SectionHeading } from "@/components/SectionHeading";
 export const Route = createFileRoute("/work")({
   head: () => ({
     meta: [
-      { title: "Work — Notisce Digital" },
+      { title: "Work, Notisce Digital" },
       { name: "description", content: "Selected projects and full live previews from Notisce Digital." },
-      { property: "og:title", content: "Work — Notisce Digital" },
+      { property: "og:title", content: "Work, Notisce Digital" },
       { property: "og:description", content: "Step inside full visual previews of recent Notisce Digital projects." },
     ],
   }),
@@ -25,7 +25,7 @@ function Work() {
         <SectionHeading
           eyebrow="Selected work"
           title="Step inside the projects."
-          subtitle="Click any card to open a full visual preview. These are designs only — no internal links — built to show how the real thing feels."
+          subtitle="Click any card to open a full visual preview. These are designs only, no internal links, built to show how the real thing feels."
         />
       </section>
       <section className="container-narrow pb-24">

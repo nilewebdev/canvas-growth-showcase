@@ -5,9 +5,9 @@ import { PricingCard, tiers } from "@/components/PricingCard";
 export const Route = createFileRoute("/pricing")({
   head: () => ({
     meta: [
-      { title: "Pricing — Notisce Digital" },
-      { name: "description", content: "Premium websites, SEO and growth — with launch pricing for our first clients of 2026." },
-      { property: "og:title", content: "Pricing — Notisce Digital" },
+      { title: "Pricing, Notisce Digital" },
+      { name: "description", content: "Premium websites, SEO and growth, with launch pricing for our first clients of 2026." },
+      { property: "og:title", content: "Pricing, Notisce Digital" },
       { property: "og:description", content: "Transparent project pricing and monthly retainers for websites, SEO and growth." },
     ],
   }),
@@ -17,7 +17,7 @@ export const Route = createFileRoute("/pricing")({
 const retainers = [
   { name: "Basic Care", price: "£30 – £80 / mo", body: "Hosting, security, monthly updates and small content edits to keep your site fresh." },
   { name: "SEO Retainer", price: "£200 – £800 / mo", body: "Ongoing keyword work, content, technical fixes and reporting to keep climbing Google." },
-  { name: "Growth Partner", price: "£500 – £1,500 / mo", body: "A full marketing partner — SEO, conversion, analytics and quarterly strategy reviews." },
+  { name: "Growth Partner", price: "£500 – £1,500 / mo", body: "A full marketing partner, SEO, conversion, analytics and quarterly strategy reviews." },
 ];
 
 function Pricing() {
@@ -27,14 +27,14 @@ function Pricing() {
         <div className="text-center mb-6">
           <span className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] bg-[var(--color-sand)]/15 text-[var(--color-sand)] px-4 py-2 rounded-full">
             <span className="size-1.5 rounded-full bg-[var(--color-sand)] animate-pulse" />
-            Limited Time — First Client Discounts
+            Limited Time, First Client Discounts
           </span>
         </div>
         <SectionHeading
           align="center"
           eyebrow="Pricing"
           title="Honest pricing. Quietly premium work."
-          subtitle="Launch pricing for our first clients of 2026 — locked in for the life of your project."
+          subtitle="Launch pricing for our first clients of 2026, locked in for the life of your project."
         />
       </section>
 

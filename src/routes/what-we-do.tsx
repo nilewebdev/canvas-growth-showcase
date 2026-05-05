@@ -6,10 +6,10 @@ import { useReveal } from "@/hooks/use-reveal";
 export const Route = createFileRoute("/what-we-do")({
   head: () => ({
     meta: [
-      { title: "What We Do — Notisce Digital" },
+      { title: "What We Do, Notisce Digital" },
       { name: "description", content: "Premium website design, SEO and conversion optimisation for modern businesses." },
-      { property: "og:title", content: "What We Do — Notisce Digital" },
-      { property: "og:description", content: "Three quiet specialisms — websites, SEO and conversion — built for one outcome: more customers." },
+      { property: "og:title", content: "What We Do, Notisce Digital" },
+      { property: "og:description", content: "Three quiet specialisms, websites, SEO and conversion, built for one outcome: more customers." },
     ],
   }),
   component: WhatWeDo,
@@ -17,19 +17,19 @@ export const Route = createFileRoute("/what-we-do")({
 
 const blocks = [
   {
-    eyebrow: "01 — Website Design",
+    eyebrow: "01, Website Design",
     title: "Conversion-focused websites that earn their place.",
     body: "Every page is designed around one question: will this turn a visitor into a customer? Beautiful is the floor, not the ceiling.",
     points: ["Custom-designed, never templated", "Mobile-first, lightning fast", "Built around your offer, not ours", "Clear next steps on every page"],
   },
   {
-    eyebrow: "02 — SEO & Google Growth",
+    eyebrow: "02, SEO & Google Growth",
     title: "Get found by the customers actively looking.",
     body: "Technical SEO, on-page optimisation and local search strategy that puts you at the top of the page where it matters.",
     points: ["Local SEO & Google Business Profile", "Keyword & competitor research", "Technical audits & schema", "Monthly reporting that's actually readable"],
   },
   {
-    eyebrow: "03 — Conversion Optimisation",
+    eyebrow: "03, Conversion Optimisation",
     title: "Turn the visitors you already have into revenue.",
     body: "Most sites don't need more traffic. They need a smarter route from visit to enquiry. We find it, test it, and lock it in.",
     points: ["Heatmaps & user-session analysis", "Funnel & form optimisation", "A/B testing of key pages", "Booking & CRM integrations"],
@@ -65,7 +65,7 @@ function WhatWeDo() {
       <section className="container-narrow pt-16 md:pt-24">
         <SectionHeading
           eyebrow="What we do"
-          title="Three quiet specialisms — one outcome."
+          title="Three quiet specialisms, one outcome."
           subtitle="We don't do everything. We do three things very well, and they all lead to the same place: more of the right customers, more often."
         />
       </section>

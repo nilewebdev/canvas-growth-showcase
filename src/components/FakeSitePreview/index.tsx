@@ -2,7 +2,7 @@ import type { ProjectKey } from "@/data/projects";
 
 /* ============================================================
  * Each preview is its OWN visually distinct mini-site.
- * No images — all CSS, gradients, type, layout.
+ * No images, all CSS, gradients, type, layout.
  * ============================================================ */
 
 function HalfdenBarber() {
@@ -44,7 +44,7 @@ function HalfdenBarber() {
         <p className="text-2xl md:text-3xl italic max-w-2xl mx-auto px-6 leading-snug">
           "The kind of barbershop you tell your closest friends about, quietly."
         </p>
-        <p className="mt-6 text-[10px] tracking-[0.4em]">— TIME OUT, 2025</p>
+        <p className="mt-6 text-[10px] tracking-[0.4em]">, TIME OUT, 2025</p>
       </section>
 
       <footer className="text-center py-10 text-[10px] tracking-[0.4em] text-white/40">
@@ -95,7 +95,7 @@ function MaisonRestaurant() {
       <section className="bg-[#2a1f12] text-[#faf6ee] py-16 text-center">
         <div className="text-xs tracking-[0.4em] mb-4">RESERVATIONS</div>
         <div className="text-3xl italic">+44 20 7946 0000</div>
-        <div className="mt-6 text-xs tracking-[0.3em]">TUE — SAT · 6PM TIL LATE</div>
+        <div className="mt-6 text-xs tracking-[0.3em]">TUE, SAT · 6PM TIL LATE</div>
       </section>
     </div>
   );
