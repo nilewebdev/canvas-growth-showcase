@@ -26,20 +26,21 @@ const links = [
 
 export function Footer() {
   return (
-    <footer className="bg-[oklch(0.94_0.005_85)] mt-24">
-      <div className="container-narrow pt-14 pb-10">
-        <div className="grid gap-10 md:gap-12 md:grid-cols-3 text-left items-start">
-          <div className="flex flex-col items-start gap-4">
-            <Link to="/" aria-label="Notisce Digital home">
+    <footer className="bg-[oklch(0.94_0.005_85)] mt-16 md:mt-24">
+      <div className="container-narrow pt-16 pb-8">
+        <div className="grid gap-12 md:gap-16 md:grid-cols-3 items-start">
+          <div className="flex flex-col items-start gap-5">
+            <Link to="/" aria-label="Notisce Digital home" className="inline-block">
               <Logo variant="full" height={64} className="md:hidden" />
               <Logo variant="full" height={72} className="hidden md:block" />
             </Link>
-            <p className="text-sm text-muted-foreground max-w-xs">
+            <p className="text-sm text-muted-foreground max-w-xs leading-relaxed">
               Helping businesses grow through better websites and Google visibility.
             </p>
           </div>
 
-          <nav aria-label="Footer" className="flex flex-col gap-3 md:items-center">
+          <nav aria-label="Footer" className="flex flex-col gap-3 md:items-center md:pt-2">
+            <div className="text-xs uppercase tracking-[0.25em] text-[var(--color-sand)] mb-1">Pages</div>
             {links.map((l) => (
               <Link
                 key={l.to}
@@ -51,7 +52,8 @@ export function Footer() {
             ))}
           </nav>
 
-          <div className="flex flex-col items-start md:items-end gap-5">
+          <div className="flex flex-col items-start md:items-end gap-4 md:pt-2">
+            <div className="text-xs uppercase tracking-[0.25em] text-[var(--color-sand)] mb-1">Get in touch</div>
             <a
               href="mailto:contact@notisce.co.uk"
               className="text-sm text-foreground hover:text-[var(--color-sand)] transition-colors"
@@ -66,7 +68,7 @@ export function Footer() {
             >
               WhatsApp · 07564 607279
             </a>
-            <div className="flex items-center gap-5">
+            <div className="flex items-center gap-5 mt-2">
               {socials.map(({ Icon, href, label }) => (
                 <a
                   key={label}
@@ -83,7 +85,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-6 border-t border-[var(--color-sand)]/40 flex flex-row justify-between gap-2 text-xs text-muted-foreground">
+        <div className="mt-14 pt-6 border-t border-[var(--color-sand)]/40 flex flex-row justify-between items-center gap-2 text-xs text-muted-foreground">
           <p>© 2026 Notisce Digital</p>
           <p>All rights reserved</p>
         </div>
