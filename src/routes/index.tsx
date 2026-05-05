@@ -52,28 +52,6 @@ function Hero() {
   );
 }
 
-function Showcase() {
-  return (
-    <section className="container-narrow section">
-      <div className="flex items-end justify-between gap-6 mb-12 flex-wrap">
-        <SectionHeading
-          eyebrow="Our work"
-          title="Recent projects."
-          subtitle="A small selection of brands we've shaped."
-        />
-        <Link to="/work" className="text-sm text-foreground/80 hover:text-foreground inline-flex items-center gap-1">
-          View all <ArrowRight size={14} />
-        </Link>
-      </div>
-      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-        {projects.slice(0, 3).map((p) => (
-          <ProjectCard key={p.key} project={p} />
-        ))}
-      </div>
-    </section>
-  );
-}
-
 const services = [
   { Icon: Sparkles, title: "Website Design", body: "Premium, conversion-focused websites that look as good as the brands they sell." },
   { Icon: Search, title: "SEO & Google Growth", body: "Get found by the right customers with technical SEO and local search strategy." },
