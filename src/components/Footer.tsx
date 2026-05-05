@@ -31,8 +31,8 @@ export function Footer() {
         <div className="grid gap-10 md:gap-12 md:grid-cols-3 text-left items-start">
           <div className="flex flex-col items-start gap-4">
             <Link to="/" aria-label="Notisce Digital home">
-              <Logo variant="mark" height={48} className="md:hidden" />
-              <Logo variant="full" height={52} className="hidden md:block" />
+              <Logo variant="full" height={64} className="md:hidden" />
+              <Logo variant="full" height={72} className="hidden md:block" />
             </Link>
             <p className="text-sm text-muted-foreground max-w-xs">
               Helping businesses grow through better websites and Google visibility.
