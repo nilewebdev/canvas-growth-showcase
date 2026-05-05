@@ -1,9 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useState } from "react";
 import { ArrowRight, Sparkles, Search, MousePointerClick } from "lucide-react";
-import { projects, type Project } from "@/data/projects";
+import { projects } from "@/data/projects";
 import { ProjectCard } from "@/components/ProjectCard";
-import { ProjectPreviewModal } from "@/components/ProjectPreviewModal";
 import { SectionHeading } from "@/components/SectionHeading";
 import { PricingCard, tiers } from "@/components/PricingCard";
 import { useReveal } from "@/hooks/use-reveal";
@@ -56,14 +54,14 @@ function Hero() {
   );
 }
 
-function Showcase({ onOpen }: { onOpen: (p: Project) => void }) {
+function Showcase() {
   return (
     <section className="container-narrow section">
       <div className="flex items-end justify-between gap-6 mb-12 flex-wrap">
         <SectionHeading
           eyebrow="Our work"
-          title="Live previews of recent projects."
-          subtitle="Click any card to step inside a full site preview, no links, just the design."
+          title="Recent projects."
+          subtitle="A small selection of brands we've shaped."
         />
         <Link to="/work" className="text-sm text-foreground/80 hover:text-foreground inline-flex items-center gap-1">
           View all <ArrowRight size={14} />
@@ -71,7 +69,7 @@ function Showcase({ onOpen }: { onOpen: (p: Project) => void }) {
       </div>
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         {projects.slice(0, 3).map((p) => (
-          <ProjectCard key={p.key} project={p} onOpen={() => onOpen(p)} />
+          <ProjectCard key={p.key} project={p} />
         ))}
       </div>
     </section>
@@ -181,16 +179,14 @@ function FinalCTA() {
 }
 
 function Home() {
-  const [active, setActive] = useState<Project | null>(null);
   return (
     <>
       <Hero />
-      <Showcase onOpen={setActive} />
+      <Showcase />
       <WhatWeDo />
       <Results />
       <PricingPreview />
       <FinalCTA />
-      <ProjectPreviewModal project={active} onClose={() => setActive(null)} />
     </>
   );
 }

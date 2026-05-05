@@ -29,8 +29,9 @@ export function Navbar() {
       }`}
     >
       <div className="container-narrow flex items-center justify-between h-14 md:h-20">
-        <Link to="/" className="text-foreground" onClick={() => setOpen(false)} aria-label="Notisce Digital home">
-          <Logo height={28} className="md:h-9" />
+        <Link to="/" className="text-foreground flex items-center" onClick={() => setOpen(false)} aria-label="Notisce Digital home">
+          <Logo variant="mark" height={32} className="md:hidden" />
+          <Logo variant="full" height={36} className="hidden md:block" />
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">
