@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Instagram, Linkedin, Twitter } from "lucide-react";
+import { Instagram, Twitter } from "lucide-react";
 import { Logo } from "./Logo";
 
 function TikTok({ size = 18 }: { size?: number }) {
@@ -14,7 +14,6 @@ const socials = [
   { Icon: Instagram, href: "https://instagram.com/notisce.digital", label: "Instagram" },
   { Icon: TikTok, href: "https://tiktok.com/@notisce.digital", label: "TikTok" },
   { Icon: Twitter, href: "https://x.com/notisce.digital", label: "Twitter / X" },
-  { Icon: Linkedin, href: "https://linkedin.com/in/notisce.digital", label: "LinkedIn" },
 ];
 
 const links = [
@@ -28,16 +27,19 @@ const links = [
 export function Footer() {
   return (
     <footer className="bg-[oklch(0.94_0.005_85)] mt-24">
-      <div className="container-narrow pt-16 pb-10">
-        <div className="grid gap-12 md:grid-cols-3 text-left items-start">
+      <div className="container-narrow pt-14 pb-10">
+        <div className="grid gap-10 md:gap-12 md:grid-cols-3 text-left items-start">
           <div className="flex flex-col items-start gap-4">
-            <Logo height={36} />
+            <Link to="/" aria-label="Notisce Digital home">
+              <Logo variant="mark" height={48} className="md:hidden" />
+              <Logo variant="full" height={52} className="hidden md:block" />
+            </Link>
             <p className="text-sm text-muted-foreground max-w-xs">
               Helping businesses grow through better websites and Google visibility.
             </p>
           </div>
 
-          <nav className="flex flex-col gap-3 md:items-center">
+          <nav aria-label="Footer" className="flex flex-col gap-3 md:items-center">
             {links.map((l) => (
               <Link
                 key={l.to}
@@ -55,6 +57,14 @@ export function Footer() {
               className="text-sm text-foreground hover:text-[var(--color-sand)] transition-colors"
             >
               contact@notisce.co.uk
+            </a>
+            <a
+              href="https://wa.me/447564607279"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="text-sm text-foreground hover:text-[var(--color-sand)] transition-colors"
+            >
+              WhatsApp · 07564 607279
             </a>
             <div className="flex items-center gap-5">
               {socials.map(({ Icon, href, label }) => (

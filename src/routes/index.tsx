@@ -1,7 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Sparkles, Search, MousePointerClick } from "lucide-react";
-import { projects } from "@/data/projects";
-import { ProjectCard } from "@/components/ProjectCard";
 import { SectionHeading } from "@/components/SectionHeading";
 import { PricingCard, tiers } from "@/components/PricingCard";
 import { useReveal } from "@/hooks/use-reveal";
@@ -49,28 +47,6 @@ function Hero() {
             View Pricing
           </Link>
         </div>
-      </div>
-    </section>
-  );
-}
-
-function Showcase() {
-  return (
-    <section className="container-narrow section">
-      <div className="flex items-end justify-between gap-6 mb-12 flex-wrap">
-        <SectionHeading
-          eyebrow="Our work"
-          title="Recent projects."
-          subtitle="A small selection of brands we've shaped."
-        />
-        <Link to="/work" className="text-sm text-foreground/80 hover:text-foreground inline-flex items-center gap-1">
-          View all <ArrowRight size={14} />
-        </Link>
-      </div>
-      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-        {projects.slice(0, 3).map((p) => (
-          <ProjectCard key={p.key} project={p} />
-        ))}
       </div>
     </section>
   );
@@ -182,7 +158,6 @@ function Home() {
   return (
     <>
       <Hero />
-      <Showcase />
       <WhatWeDo />
       <Results />
       <PricingPreview />
