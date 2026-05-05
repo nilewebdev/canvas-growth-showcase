@@ -9,17 +9,11 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as WorkRouteImport } from './routes/work'
 import { Route as WhatWeDoRouteImport } from './routes/what-we-do'
 import { Route as PricingRouteImport } from './routes/pricing'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as IndexRouteImport } from './routes/index'
 
-const WorkRoute = WorkRouteImport.update({
-  id: '/work',
-  path: '/work',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const WhatWeDoRoute = WhatWeDoRouteImport.update({
   id: '/what-we-do',
   path: '/what-we-do',
@@ -46,14 +40,12 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/pricing': typeof PricingRoute
   '/what-we-do': typeof WhatWeDoRoute
-  '/work': typeof WorkRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/contact': typeof ContactRoute
   '/pricing': typeof PricingRoute
   '/what-we-do': typeof WhatWeDoRoute
-  '/work': typeof WorkRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -61,14 +53,13 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/pricing': typeof PricingRoute
   '/what-we-do': typeof WhatWeDoRoute
-  '/work': typeof WorkRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/contact' | '/pricing' | '/what-we-do' | '/work'
+  fullPaths: '/' | '/contact' | '/pricing' | '/what-we-do'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/contact' | '/pricing' | '/what-we-do' | '/work'
-  id: '__root__' | '/' | '/contact' | '/pricing' | '/what-we-do' | '/work'
+  to: '/' | '/contact' | '/pricing' | '/what-we-do'
+  id: '__root__' | '/' | '/contact' | '/pricing' | '/what-we-do'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -76,18 +67,10 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   PricingRoute: typeof PricingRoute
   WhatWeDoRoute: typeof WhatWeDoRoute
-  WorkRoute: typeof WorkRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/work': {
-      id: '/work'
-      path: '/work'
-      fullPath: '/work'
-      preLoaderRoute: typeof WorkRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/what-we-do': {
       id: '/what-we-do'
       path: '/what-we-do'
@@ -124,7 +107,6 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   PricingRoute: PricingRoute,
   WhatWeDoRoute: WhatWeDoRoute,
-  WorkRoute: WorkRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

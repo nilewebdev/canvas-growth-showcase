@@ -19,33 +19,49 @@ export const Route = createFileRoute("/")({
 function Hero() {
   const ref = useReveal<HTMLDivElement>();
   return (
-    <section className="container-narrow pt-16 md:pt-28 pb-16 md:pb-24">
-      <div ref={ref} className="reveal max-w-4xl">
-        <div className="text-xs uppercase tracking-[0.3em] text-[var(--color-sand)] mb-6 flex items-center gap-2">
-          <span className="inline-block w-8 h-px bg-[var(--color-sand)]" />
-          Notisce Digital
-        </div>
-        <h1 className="font-display font-light text-[2.5rem] sm:text-6xl md:text-7xl leading-[1.05] tracking-tight">
-          We help businesses get more customers through{" "}
-          <span className="italic text-[var(--color-sand)]">better websites</span> & Google visibility.
-        </h1>
-        <p className="mt-8 text-base md:text-lg text-muted-foreground max-w-2xl leading-relaxed">
-          A premium agency for ambitious brands. We design, build and grow sites that look beautiful, and quietly bring in revenue.
-        </p>
-        <div className="mt-10 flex flex-wrap gap-4">
-          <Link
-            to="/contact"
-            className="group inline-flex items-center gap-2 rounded-full bg-foreground text-primary-foreground px-6 py-3.5 text-sm tracking-wide hover:bg-graphite transition-colors"
-          >
-            Get Free Audit
-            <ArrowRight size={16} className="group-hover:translate-x-0.5 transition-transform" />
-          </Link>
-          <Link
-            to="/pricing"
-            className="inline-flex items-center rounded-full border border-foreground/20 px-6 py-3.5 text-sm tracking-wide hover:bg-foreground hover:text-primary-foreground transition-colors"
-          >
-            View Pricing
-          </Link>
+    <section className="relative overflow-hidden">
+      <div aria-hidden="true" className="absolute inset-0 ambient-grain pointer-events-none" />
+      <div className="container-narrow pt-16 md:pt-32 pb-20 md:pb-32 relative">
+        <div ref={ref} className="reveal max-w-4xl">
+          <div className="text-xs uppercase tracking-[0.3em] text-[var(--color-sand)] mb-6 flex items-center gap-3">
+            <span className="inline-block w-10 h-px bg-[var(--color-sand)]" />
+            Notisce Digital
+          </div>
+          <h1 className="font-display font-light text-[2.75rem] sm:text-6xl md:text-7xl lg:text-[5.25rem] leading-[1.02] tracking-tight">
+            We help businesses get more customers through{" "}
+            <span className="italic text-[var(--color-sand)]">better websites</span> & Google visibility.
+          </h1>
+          <p className="mt-8 text-base md:text-lg text-muted-foreground max-w-2xl leading-relaxed">
+            A premium agency for ambitious brands. We design, build and grow sites that look beautiful, and quietly bring in revenue.
+          </p>
+          <div className="mt-10 flex flex-wrap gap-4">
+            <Link
+              to="/contact"
+              className="group inline-flex items-center gap-2 rounded-full bg-foreground text-primary-foreground px-7 py-3.5 text-sm tracking-wide hover:bg-graphite transition-colors"
+            >
+              Get Free Audit
+              <ArrowRight size={16} className="group-hover:translate-x-0.5 transition-transform" />
+            </Link>
+            <Link
+              to="/pricing"
+              className="inline-flex items-center rounded-full border border-foreground/20 px-7 py-3.5 text-sm tracking-wide hover:bg-foreground hover:text-primary-foreground transition-colors"
+            >
+              View Pricing
+            </Link>
+          </div>
+
+          <div className="mt-16 grid grid-cols-3 gap-6 max-w-xl border-t border-border/60 pt-8">
+            {[
+              { v: "+120%", l: "Avg. lead lift" },
+              { v: "2×", l: "Faster sites" },
+              { v: "Top 3", l: "Google rankings" },
+            ].map((s) => (
+              <div key={s.l}>
+                <div className="font-display text-2xl md:text-3xl font-light text-foreground">{s.v}</div>
+                <div className="mt-1 text-[11px] uppercase tracking-[0.18em] text-muted-foreground">{s.l}</div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
