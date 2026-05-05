@@ -31,9 +31,9 @@ export function Footer() {
       <div className="container-narrow pt-16 pb-10">
         <div className="grid gap-12 md:grid-cols-3 text-center md:text-left items-start">
           <div className="flex flex-col items-center md:items-start gap-4">
-            <Logo />
+            <Logo height={36} />
             <p className="text-sm text-muted-foreground max-w-xs">
-              Helping businesses grow through better websites &amp; Google visibility.
+              Helping businesses grow through better websites and Google visibility.
             </p>
           </div>
 
