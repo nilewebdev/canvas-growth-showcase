@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, X } from "lucide-react";
 import type { Project } from "@/data/projects";
 import { FakeSitePreview } from "./FakeSitePreview";
 
@@ -25,21 +25,35 @@ export function ProjectPreviewModal({
 
   return (
     <div className="fixed inset-0 z-[100] bg-background animate-fade-in">
-      <div className="sticky top-0 z-10 backdrop-blur-md bg-background/85 border-b border-border/60">
-        <div className="container-narrow h-16 flex items-center justify-between">
+      {/* Top bar */}
+      <div className="sticky top-0 z-20 backdrop-blur-md bg-background/85 border-b border-border/60">
+        <div className="container-narrow h-14 md:h-16 flex items-center justify-between gap-3">
           <button
             onClick={onClose}
-            className="inline-flex items-center gap-2 text-sm text-foreground hover:text-[var(--color-sand)] transition-colors"
+            className="inline-flex items-center gap-2 text-sm text-foreground hover:text-[var(--color-sand)] transition-colors group"
           >
-            <ArrowLeft size={16} /> Back to Projects
+            <ArrowLeft size={16} className="group-hover:-translate-x-0.5 transition-transform" />
+            <span className="hidden sm:inline">Back to Projects</span>
+            <span className="sm:hidden">Back</span>
           </button>
-          <div className="text-xs uppercase tracking-[0.25em] text-muted-foreground">
-            Preview · {project.title}
+          <div className="text-[10px] sm:text-xs uppercase tracking-[0.25em] text-muted-foreground truncate">
+            Preview · <span className="text-foreground">{project.title}</span>
           </div>
+          <button
+            onClick={onClose}
+            aria-label="Close preview"
+            className="size-9 rounded-full border border-border flex items-center justify-center text-foreground/70 hover:bg-foreground hover:text-primary-foreground hover:border-foreground transition-all"
+          >
+            <X size={16} />
+          </button>
         </div>
       </div>
-      <div className="overflow-y-auto h-[calc(100vh-4rem)] animate-scale-in">
-        <FakeSitePreview projectKey={project.key} />
+
+      {/* Floating back FAB on mobile when scrolled */}
+      <div className="overflow-y-auto h-[calc(100dvh-3.5rem)] md:h-[calc(100vh-4rem)] animate-fade-in">
+        <div className="animate-scale-in origin-top">
+          <FakeSitePreview projectKey={project.key} />
+        </div>
       </div>
     </div>
   );

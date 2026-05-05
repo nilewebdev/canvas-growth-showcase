@@ -9,10 +9,10 @@ import { Toaster } from "@/components/ui/sonner";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Notisce Digital" },
+      { title: "Contact, Notisce Digital" },
       { name: "description", content: "Request your free website audit. Let's grow your business together." },
-      { property: "og:title", content: "Contact — Notisce Digital" },
-      { property: "og:description", content: "Let's grow your business — request your free audit today." },
+      { property: "og:title", content: "Contact, Notisce Digital" },
+      { property: "og:description", content: "Let's grow your business, request your free audit today." },
     ],
   }),
   component: Contact,
@@ -48,7 +48,7 @@ function Contact() {
     setSubmitting(true);
     await new Promise((r) => setTimeout(r, 700));
     setSubmitting(false);
-    toast.success("Thanks — we'll be in touch within one business day.");
+    toast.success("Thanks, we'll be in touch within one business day.");
     (e.target as HTMLFormElement).reset();
   };
 
@@ -61,7 +61,7 @@ function Contact() {
         <SectionHeading
           eyebrow="Contact"
           title="Let's grow your business."
-          subtitle="Tell us a little about where you are and where you want to be — we'll come back with a free audit and three quick wins."
+          subtitle="Tell us a little about where you are and where you want to be, we'll come back with a free audit and three quick wins."
         />
       </section>
 

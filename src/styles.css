@@ -94,7 +94,7 @@
 
 @layer utilities {
   .container-narrow { max-width: 1200px; margin-inline: auto; padding-inline: 1.5rem; }
-  .section { padding-block: clamp(4rem, 8vw, 7rem); }
+  .section { padding-block: clamp(2.75rem, 7vw, 7rem); }
   .soft-shadow { box-shadow: 0 1px 2px rgba(17,18,20,0.04), 0 20px 60px -20px rgba(17,18,20,0.10); }
   .hover-lift { transition: transform .5s cubic-bezier(.2,.8,.2,1), box-shadow .5s; }
   .hover-lift:hover { transform: translateY(-6px); box-shadow: 0 30px 70px -25px rgba(17,18,20,0.18); }
@@ -105,4 +105,10 @@
   }
   .reveal { opacity: 0; }
   .reveal.in-view { animation: reveal-up .9s cubic-bezier(.2,.8,.2,1) forwards; }
+
+  @keyframes ns-fade-in { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes ns-scale-in { from { opacity: 0; transform: scale(.985); } to { opacity: 1; transform: scale(1); } }
+  .animate-fade-in { animation: ns-fade-in .35s ease-out both; }
+  .animate-scale-in { animation: ns-scale-in .5s cubic-bezier(.2,.8,.2,1) both; }
 }
+

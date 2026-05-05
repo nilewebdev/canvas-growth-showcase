@@ -68,7 +68,7 @@ export const tiers: PricingTier[] = [
     name: "Growth",
     oldPrice: "£1,200",
     price: "£799",
-    description: "Our most-loved package — design, SEO and conversion in one.",
+    description: "Our most-loved package, design, SEO and conversion in one.",
     popular: true,
     features: ["Up to 10 pages", "Conversion-focused design", "Local SEO setup", "Google Business Profile", "Speed optimisation", "30-day support"],
   },

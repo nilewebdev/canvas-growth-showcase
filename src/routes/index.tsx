@@ -11,9 +11,9 @@ import { useReveal } from "@/hooks/use-reveal";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Notisce Digital — Premium Websites & Google Growth" },
+      { title: "Notisce Digital, Premium Websites & Google Growth" },
       { name: "description", content: "We help businesses get more customers through better websites and Google visibility. Free audit available." },
-      { property: "og:title", content: "Notisce Digital — Premium Websites & Google Growth" },
+      { property: "og:title", content: "Notisce Digital, Premium Websites & Google Growth" },
       { property: "og:description", content: "Conversion-focused websites, SEO and growth for modern businesses." },
     ],
   }),
@@ -34,7 +34,7 @@ function Hero() {
           <span className="italic text-[var(--color-sand)]">better websites</span> & Google visibility.
         </h1>
         <p className="mt-8 text-base md:text-lg text-muted-foreground max-w-2xl leading-relaxed">
-          A premium agency for ambitious brands. We design, build and grow sites that look beautiful — and quietly bring in revenue.
+          A premium agency for ambitious brands. We design, build and grow sites that look beautiful, and quietly bring in revenue.
         </p>
         <div className="mt-10 flex flex-wrap gap-4">
           <Link
@@ -63,7 +63,7 @@ function Showcase({ onOpen }: { onOpen: (p: Project) => void }) {
         <SectionHeading
           eyebrow="Our work"
           title="Live previews of recent projects."
-          subtitle="Click any card to step inside a full site preview — no links, just the design."
+          subtitle="Click any card to step inside a full site preview, no links, just the design."
         />
         <Link to="/work" className="text-sm text-foreground/80 hover:text-foreground inline-flex items-center gap-1">
           View all <ArrowRight size={14} />
@@ -87,7 +87,7 @@ const services = [
 function WhatWeDo() {
   return (
     <section className="container-narrow section">
-      <SectionHeading eyebrow="What we do" title="Three quiet specialisms — one outcome." />
+      <SectionHeading eyebrow="What we do" title="Three quiet specialisms, one outcome." />
       <div className="grid gap-6 md:grid-cols-3 mt-12">
         {services.map(({ Icon, title, body }) => (
           <Link
@@ -137,13 +137,13 @@ function PricingPreview() {
       <div className="text-center mb-6">
         <span className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] bg-[var(--color-sand)]/15 text-[var(--color-sand)] px-4 py-2 rounded-full">
           <span className="size-1.5 rounded-full bg-[var(--color-sand)] animate-pulse" />
-          Limited Time — First Client Discounts
+          Limited Time, First Client Discounts
         </span>
       </div>
       <SectionHeading
         align="center"
         title="Pricing built around your growth."
-        subtitle="Launch offers for our first clients in 2026 — locked in for life."
+        subtitle="Launch offers for our first clients in 2026, locked in for life."
       />
       <div className="grid gap-6 md:grid-cols-3 mt-14 items-stretch">
         {tiers.map((t) => (
